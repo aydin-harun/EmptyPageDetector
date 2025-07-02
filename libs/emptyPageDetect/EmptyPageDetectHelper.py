@@ -72,9 +72,9 @@ def predict_page(image_path, model_path="page_classifier_enhanced.pkl"):
     prob = model.predict_proba([feat])[0][1]
     prob = prob*100
     print(f"{pred},{prob:.2f}")  # stdout: örn: 1,93.27
-    #print(f"{os.path.basename(image_path)} ➜ Tahmin: {'Dolu' if pred == 1 else 'Boş'} (%{prob:.2f} güven)")
+    print(f"{os.path.basename(image_path)} ➜ Tahmin: {'Dolu' if pred == 1 else 'Boş'} (%{prob:.2f} güven)")
 
-trainModel("train_pages/empty","train_pages/filled")
+#trainModel("train_pages/empty","train_pages/filled")
 
 # if __name__ == "__main__":
 #     if len(sys.argv) < 2:
@@ -88,20 +88,20 @@ trainModel("train_pages/empty","train_pages/filled")
 
 # print( datetime.datetime.now())
 # # Kullanım örneği
-#predict_page("1.tif")
+predict_page("1.tif")
 # # print("Sayfa durumu:", "Dolu" if result == 1 else "Boş", f"(%{prob*100:.2f} güven)")
 #
-# predict_page("2.tif")
+predict_page("2.tif")
 # # print("Sayfa durumu:", "Dolu" if result == 1 else "Boş", f"(%{prob*100:.2f} güven)")
 #
-# predict_page("3.tif")
+predict_page("3.tif")
 # # print("Sayfa durumu:", "Dolu" if result == 1 else "Boş", f"(%{prob*100:.2f} güven)")
 #
-# predict_page("4.tif")
+predict_page("4.tif")
 # # print("Sayfa durumu:", "Dolu" if result == 1 else "Boş", f"(%{prob*100:.2f} güven)")
 #
-# predict_page("5.tif")
+predict_page("5.tif")
 #
-# predict_page("6.tif")
+predict_page("6.tif")
 #
 # print( datetime.datetime.now())
